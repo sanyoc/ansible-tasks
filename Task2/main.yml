@@ -7,7 +7,7 @@
     debug: 
      msg: "{{ansible_os_family}}" 
   
-  - name: Include playbooks
+  - name: Including playbooks
     include_tasks: "{{ansible_os_family}}.yml"
 
   - name: Unarchive a file that needs to be downloaded
