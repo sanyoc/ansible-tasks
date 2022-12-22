@@ -1,4 +1,4 @@
-- name: Installing web server 
+- name: Installing WEB server 
   hosts: all
   
   tasks:
