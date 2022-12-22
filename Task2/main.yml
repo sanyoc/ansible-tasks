@@ -1,0 +1,23 @@
+- name: Installing web server 
+  hosts: all
+  
+  tasks:
+  
+  - name: List of Hosts and Running OS
+    debug: 
+     msg: "{{ansible_os_family}}" 
+  
+  - name: Include playbooks
+    include_tasks: "{{ansible_os_family}}.yml"
+
+  - name: Unarchive a file that needs to be downloaded
+    unarchive:
+     src: https://www.free-css.com/assets/files/free-css-templates/download/page260/mini-profile.zip
+     dest: /tmp/
+     remote_src: yes
+      
+  - name: Copy files
+    copy: 
+     src: /tmp/templatemo_530_mini_profile/
+     dest: /var/www/html
+     remote_src: yes
