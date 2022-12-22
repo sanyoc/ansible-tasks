@@ -1,15 +1,15 @@
 - name: Install Debian Apache
   apt:
-    name: apache2
-    state: latest
+   name: apache2
+   state: latest
 
 - name: Start Debian Apache
   systemd:
-    state: started
-    name: apache2
-    enabled: yes
+   state: started
+   name: apache2
+   enabled: yes
 
 - name: Install Debian Apache
   apt:
-    name: unzip
-    state: latest
+   name: unzip
+   state: latest
