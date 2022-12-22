@@ -13,7 +13,7 @@
    name: httpd
    enabled: yes
 
-- name: install the latest version of unzip
+- name: Install the latest version of unzip
   yum:
    name: unzip
    state: latest
